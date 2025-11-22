@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #fffdd4;
+    --background: #ffffff;
     --foreground: #000000;
   }
 }
@@ -27,4 +27,121 @@ body {
 
 .header {
   background-color: #ffffff;
+  height: 90px;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.logo {
+  margin: 30px;
+}
+
+.navbutton {
+  margin: 0 auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6a00ff, #ff72db);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  /* Neon base */
+  box-shadow: 0 0 6px rgba(106, 0, 255, 0.6);
+  transition: 
+    box-shadow 0.25s ease,
+    text-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbutton:hover {
+  background: linear-gradient(135deg, #ff72db, #6a00ff);
+  box-shadow:
+    0 0 12px rgba(255, 0, 200, 0.5);
+  transform: translateY(-3px);
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  height: 400px;
+  background: url('https://wallpaperbat.com/img/760480-purple-butterfly-desktop-wallpaper-top-free-purple-butterfly-desktop-background.jpg');
+}
+
+.titulonombre {
+  font-size: 2.6rem;
+  font-weight: bold;
+  font-family: 'Ballet';
+}
+
+.info {
+  width: 750px;
+  text-align: center;
+  margin: 0 auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.leermas {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  background: transparent;
+  color: #a81e81;
+  border: 4px solid;
+  transition: 0.35s ease;
+  cursor: pointer;
+}
+
+.leermas:hover {
+  color: white;
+  border-color: transparent;
+  background-image: linear-gradient(45deg, #a81e81, #e157c5), linear-gradient(45deg, #a81e81, #e157c5);
+}
+
+.mainsection {
+  padding-top: 50px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.h2 {
+  font-size: 1.4rem;
+  margin: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.text {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 30px;
+  font-family: serif;
+  background-image: url('https://myindianthings.com/cdn/shop/products/33_bdf807c9-18de-4490-aff1-910056c6e925_800x.jpg?v=1668760136');
+  height: 320px;
+  text-align: center;
 }

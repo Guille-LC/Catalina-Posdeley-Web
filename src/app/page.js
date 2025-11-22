@@ -1,5 +1,5 @@
-
-import { Header } from "../components/Header";
+import Footer from "../components/Footer";
+import Main from "../components/Main";
 
 export const metadata = {
   title: "Catalina Posdeley | Sitio Oficial",
@@ -10,7 +10,8 @@ export const metadata = {
 export default function Home() {
   return (
       <>
-        <Header />
+        <Main />
+        <Footer />
       </>
   );
 }

@@ -1,5 +1,7 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Ballet } from "next/font/google";
 import "./globals.css";
+import { Header } from "../components/Header";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,17 +13,20 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const ballet = Ballet({
+  subsets: ['latin']
+});
+
 export const metadata = {
   title: "Catalina Posdeley",
-  description: "Sitio web informativo sobre la escritora argentina Catalina Posdeley",
+  description: "Sitio web sobre la escritora argentina Catalina Posdeley",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="es">
+      <Header />
+      <body className={`${geistSans.variable} ${geistMono.variable} ${ballet.variable} antialiased`}>
         {children}
       </body>
     </html>
