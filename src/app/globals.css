@@ -52,9 +52,28 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 10px 25px;
   font-size: 1rem;
-  font-weight: 600;
   color: #ffffff;
   background: linear-gradient(135deg, #6a00ff, #ff72db);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  /* Neon base */
+  box-shadow: 0 0 6px rgba(106, 0, 255, 0.6);
+  transition: 
+    box-shadow 0.25s ease,
+    text-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbuttonactive {
+  font-weight: 400;
+  margin: 0 auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 10px 25px;
+  font-size: 1rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #984eff, #ffa8e9);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -143,6 +162,7 @@ body {
 .botonbuscalibre {
   text-align: center;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .mainsection {
@@ -172,5 +192,12 @@ body {
   font-family: serif;
   background-image: url('https://myindianthings.com/cdn/shop/products/33_bdf807c9-18de-4490-aff1-910056c6e925_800x.jpg?v=1668760136');
   height: 320px;
+  text-align: center;
+}
+
+.notfoundtitulo {
+  margin: 100px;
+  font-size: 4rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
 }

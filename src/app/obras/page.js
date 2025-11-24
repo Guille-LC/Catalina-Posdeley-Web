@@ -11,7 +11,7 @@ const Obras = () => {
         <h2 className={styles.titulolibro}>Por si no me recuerdas mañana</h2>
         <div className={styles.libroinfoflex}>
           <p className={styles.resumen}>¿Qué pasaría si un día la gente de repente te empieza a olvidar? Desapareces de las fotos donde estabas y tus amigos y familia no saben quién sos. ¿Qué harías?</p>
-          <Image src={'/porsinomerecuerdasmanana.jpg'} width={200} height={600}/>
+          <Image src={'/porsinomerecuerdasmanana.jpg'} width={200} height={600} alt='por si no me recuerdas mañana'/>
         </div>
         <Link href={'https://booknet.com/es/book/por-si-no-me-recuerdas-manana-b455927'} target="_blank" rel="noopener noreferrer">
           <button className={styles.botonleergratis}>Leer gratis</button>
