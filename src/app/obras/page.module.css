@@ -1,0 +1,49 @@
+.tituloobrascompletas {
+    font-size: 3rem;
+    font-family: 'Ballet';
+    text-align: center;
+    padding: 30px;
+}
+
+.libro {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(255, 246, 234);
+}
+
+.titulolibro {
+    font-size: 2.4rem;
+    font-family: 'Ballet';
+    text-align: center;
+}
+
+.libroinfoflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.resumen {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 400px;
+    font-size: 1.6rem;
+}
+
+.botonleergratis {
+    border-color: blueviolet;
+    border-radius: 5px;
+    border-width: 5px;
+    background-color: transparent;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.botonleergratis:hover {
+    background-color: blueviolet;
+    color: white;
+}
