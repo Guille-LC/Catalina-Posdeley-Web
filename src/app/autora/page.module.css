@@ -1,0 +1,22 @@
+.titulonombre {
+    display: flex;
+    justify-content: center;
+    font-family: 'Ballet';
+    font-size: 3rem;
+    padding: 30px;
+}
+
+.subtitulo {
+    display: flex;
+    justify-content: center;
+    font-family: 'Ballet';
+    font-size: 3rem;
+    padding: 30px;
+}
+
+.bio {
+    margin: 0 auto;
+    width: 900px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

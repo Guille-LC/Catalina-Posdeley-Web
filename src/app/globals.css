@@ -32,6 +32,7 @@ body {
   gap: 50px;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 9px 10px rgba(0,0,0,0.15);
 }
 
 .navbar {
@@ -153,10 +154,19 @@ body {
   gap: 30px;
 }
 
+.bookcover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
 .resumenlesroutes {
   width: 400px;
   text-align: right;
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.inicial {
+  font-family: 'Ballet';
+  font-size: 2.5rem;
 }
 
 .botonbuscalibre {
@@ -175,6 +185,10 @@ body {
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: column;
+}
+
+.obrasbanner {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 }
 
 .h2 {
