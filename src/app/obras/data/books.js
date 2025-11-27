@@ -43,7 +43,7 @@ const books = [
         id: '6',
         titulo: "Les Routes: La teoria del caos",
         descripcion: "Connor se muda al misterioso pueblo de Odimor para comenzar de cero. Sin embargo, la escuela allí no es lo que esperaba: se mete en peleas para defenderse, no asiste a clase porque se siente exiliado y se lleva mal con los profesores, por lo que está a punto de ser expulsado de la institución. Al intentar enderezar su camino, conoce a una chica marginada, de la cual nadie habla y a la que nadie mira; solo le aconsejan que no se acerque a ella, pues es peligrosa. Eso despierta su curiosidad. Connor acepta ciegamente lo que el destino le depara, cada caricia y cada golpe, sin preguntar por qué. Pronto descubrirá que sus amigos, enemigos y conocidos no fueron sinceros. ¿Cuánto tiempo aguantará?",
-        genero: 'Fantasia juvenil',
+        genero: 'Juvenil',
         image: '/lesroutescover.jpg',
         link: "https://www.buscalibre.com.ar/libro-les-routes/9786316624475/p/64312491"
     },

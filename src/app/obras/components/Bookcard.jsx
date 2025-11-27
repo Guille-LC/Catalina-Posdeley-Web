@@ -10,7 +10,6 @@ const Bookcard = ({data}) => {
                 <h2 className={styles.titulolibro}>{data.titulo}</h2>
                 <div className={styles.libroinfoflex}>
                     <p className={styles.resumen}>{data.descripcion}</p>
-                    <p>{data.genero}</p>
                     <Image src={data.image} width={200} height={600} alt={data.titulo} />
                 </div>
                 <Link href={data.link} target="_blank" rel="noopener noreferrer">

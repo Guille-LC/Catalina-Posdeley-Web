@@ -11,7 +11,7 @@ const links = [
     },
     {
         label: 'Obras',
-        href: '/obras'
+        href: '/obras/all'
     },
     {
         label: 'La autora',

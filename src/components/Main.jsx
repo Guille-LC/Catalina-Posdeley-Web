@@ -30,7 +30,7 @@ const Main = () => {
                 </section>
                 <section className='mainsection'>
                     <h2 className='h2'>Obras Completas</h2>
-                    <Link href={`/obras`}>
+                    <Link href={`/obras/all`}>
                         <Image className='obrasbanner' src={'/banner.png'} width={500} height={150} alt='banner'/>
                     </Link>
                 </section>
