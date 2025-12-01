@@ -5,10 +5,16 @@
     padding: 30px;
 }
 
+/* Bookcard */
+
 .libro {
+    margin: 0 auto;
+    width: 1000px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: rgb(255, 246, 234);
+    /* border-color: rgb(5, 94, 64);
+    border-style: dashed;
+    border-width: 5px; */
 }
 
 .titulolibro {
@@ -25,25 +31,53 @@
     flex-direction: row;
 }
 
+.imagendeportada {
+    margin: 20px;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
 .resumen {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    width: 400px;
-    font-size: 1.6rem;
+    font-family: 'Times New Roman', Times, serif ;
+    width: 500px;
+    font-size: 1.4rem;
+}
+
+.botonwrap {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .botonleergratis {
     border-color: blueviolet;
     border-radius: 5px;
     border-width: 5px;
+
     background-color: transparent;
-    text-align: center;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+
     padding: 10px;
+    display: inline-block;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .botonleergratis:hover {
     background-color: blueviolet;
     color: white;
+}
+
+/* Genero no existente */
+
+.titulonoencontrado {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3rem;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.volveratras {
+    margin: 0 auto;
+    border-width: 5px;
+    border-style: solid;
+    border-color: aqua;
 }

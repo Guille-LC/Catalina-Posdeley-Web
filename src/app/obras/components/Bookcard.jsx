@@ -9,12 +9,14 @@ const Bookcard = ({data}) => {
             <div className={styles.libro}>
                 <h2 className={styles.titulolibro}>{data.titulo}</h2>
                 <div className={styles.libroinfoflex}>
+                    <Image className={styles.imagendeportada} src={data.image} width={200} height={600} alt={data.titulo} />
                     <p className={styles.resumen}>{data.descripcion}</p>
-                    <Image src={data.image} width={200} height={600} alt={data.titulo} />
                 </div>
-                <Link href={data.link} target="_blank" rel="noopener noreferrer">
-                    <button className={styles.botonleergratis}>Leer gratis</button>
-                </Link>
+                <div className={styles.botonwrap}>
+                    <Link href={data.link} target="_blank" rel="noopener noreferrer">
+                        <button className={styles.botonleergratis}>Leer gratis</button>
+                    </Link>
+                </div>
             </div>
         </>
     )

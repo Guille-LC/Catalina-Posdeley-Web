@@ -1,6 +1,7 @@
 import React from 'react'
 import Bookcard from '../components/Bookcard'
 import books from '../data/books.js'
+import GeneroInvalido from '../components/GeneroInvalido';
 
 export default async function ObrasGenero({ params }) {
 
@@ -11,7 +12,9 @@ export default async function ObrasGenero({ params }) {
   const generoInvalido = genero !== 'all' && !generosValidos.includes(genero);
 
   if (generoInvalido) {
-    return <h3>El género "{genero}" no existe.</h3>;
+    return (
+      <GeneroInvalido />
+    )
   }
 
   const item = genero === 'all'

@@ -1,7 +1,9 @@
+'use client'
+
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Footer() {
+export function Footer() {
     return (
         <footer className="bg-neutral-primary-soft">
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
