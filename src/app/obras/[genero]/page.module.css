@@ -5,16 +5,25 @@
     padding: 30px;
 }
 
+.bookcardwrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.separador {
+    margin: 0 auto;
+}
+
 /* Bookcard */
 
 .libro {
-    margin: 0 auto;
+    margin: 30px;
     width: 1000px;
     padding-top: 10px;
     padding-bottom: 10px;
-    /* border-color: rgb(5, 94, 64);
-    border-style: dashed;
-    border-width: 5px; */
+
 }
 
 .titulolibro {
@@ -43,7 +52,7 @@
 }
 
 .botonwrap {
-    margin: 30px;
+    margin: 10px;
     display: flex;
     justify-content: center;
 }
@@ -55,7 +64,7 @@
 
     background-color: transparent;
 
-    padding: 10px;
+    padding: 5px;
     display: inline-block;
     width: fit-content;
     margin: 0 auto;
@@ -69,15 +78,29 @@
 /* Genero no existente */
 
 .titulonoencontrado {
+    padding: 40px;
     margin: 0 auto;
     text-align: center;
     font-size: 3rem;
     font-family:'Times New Roman', Times, serif;
 }
 
+.botonvolverwrap {
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+}
+
 .volveratras {
     margin: 0 auto;
     border-width: 5px;
     border-style: solid;
-    border-color: aqua;
+    border-radius: 5px;
+    border-color: rgb(129, 23, 123);
+    font-size: 1.4rem;
+}
+
+.volveratras:hover {
+    background-color: blueviolet;
+    color: aliceblue;
 }

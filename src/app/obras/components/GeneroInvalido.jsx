@@ -11,7 +11,9 @@ const GeneroInvalido = () => {
   return (
     <>
       <h1 className={styles.titulonoencontrado}>El genero que estas buscando no existe...</h1>
+    <div className={styles.botonvolverwrap}>
       <button className={styles.volveratras} onClick={() => router.back()}>Volver atras</button>
+    </div>
     </>
   )
 }

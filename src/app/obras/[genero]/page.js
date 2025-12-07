@@ -2,6 +2,7 @@ import React from 'react'
 import Bookcard from '../components/Bookcard'
 import books from '../data/books.js'
 import GeneroInvalido from '../components/GeneroInvalido';
+import styles from './page.module.css'
 
 export default async function ObrasGenero({ params }) {
 
@@ -24,7 +25,7 @@ export default async function ObrasGenero({ params }) {
   return (
     <>
       <h3>Libros de genero: {genero}</h3>
-      <div>
+      <div className={styles.bookcardwrap}>
         {item.map((book) => (
           <Bookcard key={book.id} data={book} />
         ))}

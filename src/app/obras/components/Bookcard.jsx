@@ -17,6 +17,7 @@ const Bookcard = ({data}) => {
                         <button className={styles.botonleergratis}>Leer gratis</button>
                     </Link>
                 </div>
+                <Image className={styles.separador} src='/separador.png' width={400} height={1} alt='sepadador'/>
             </div>
         </>
     )
