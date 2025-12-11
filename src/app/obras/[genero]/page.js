@@ -8,7 +8,9 @@ export default async function ObrasGenero({ params }) {
 
   const { genero } = await params;
 
-  const generosValidos = [...new Set(books.map(b => b.genero))];
+  const data = await fetch(`http://localhost:3000/api/obras`, {cache: 'no-store'}).then(r => r.json())
+
+  const generosValidos = [...new Set(data.map(b => b.genero))];
 
   const generoInvalido = genero !== 'all' && !generosValidos.includes(genero);
 
@@ -19,8 +21,8 @@ export default async function ObrasGenero({ params }) {
   }
 
   const item = genero === 'all'
-    ? books
-    : books.filter(item => item.genero === genero)
+    ? data
+    : data.filter(item => item.genero === genero)
 
   return (
     <>
