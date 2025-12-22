@@ -1,8 +1,8 @@
 import React from 'react'
 import Bookcard from '../components/Bookcard'
-import books from '../data/books.js'
 import GeneroInvalido from '../components/GeneroInvalido';
 import styles from './page.module.css'
+import Nobooks from '../components/Nobooks';
 
 export default async function ObrasGenero({ params }) {
 
@@ -13,6 +13,12 @@ export default async function ObrasGenero({ params }) {
   const generosValidos = [...new Set(data.map(b => b.genero))];
 
   const generoInvalido = genero !== 'all' && !generosValidos.includes(genero);
+
+  if(data.length === 0) {
+    return(
+      <Nobooks />
+    )
+  }
 
   if (generoInvalido) {
     return (
