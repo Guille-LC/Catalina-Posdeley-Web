@@ -3,6 +3,7 @@ import Bookcard from '../components/Bookcard'
 import GeneroInvalido from '../components/GeneroInvalido';
 import styles from './page.module.css'
 import Nobooks from '../components/Nobooks';
+import Link from 'next/link';
 
 export default async function ObrasGenero({ params }) {
 
@@ -32,8 +33,15 @@ export default async function ObrasGenero({ params }) {
 
   return (
     <>
-      <h3>Libros de genero: {genero}</h3>
       <div className={styles.bookcardwrap}>
+        <section className={styles.botoneraGeneros}>
+          <Link className={styles.generoBoton} href={'/obras/all'}>Todos</Link>
+          <Link className={styles.generoBoton} href={'/obras/Juvenil'}>Juvenil</Link>
+          <Link className={styles.generoBoton} href={'/obras/Suspenso'}>Suspenso</Link>
+          <Link className={styles.generoBoton} href={'/obras/Aventura'}>Aventura</Link>
+          <Link className={styles.generoBoton} href={'/obras/Fantasia'}>Fantasia</Link>
+          <Link className={styles.generoBoton} href={'/obras/Poesia'}>Poesia</Link>
+        </section>
         {item.map((book) => (
           <Bookcard key={book.id} data={book} />
         ))}

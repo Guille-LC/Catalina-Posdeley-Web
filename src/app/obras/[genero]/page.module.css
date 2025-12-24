@@ -16,6 +16,23 @@
     margin: 0 auto;
 }
 
+/*Botonera de generos*/
+
+.botoneraGeneros {
+    margin: 30px;
+    display: flex;
+    gap: 30px;
+}
+
+.generoBoton {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.generoBoton:hover {
+    text-decoration: underline;
+    color: rgb(144, 0, 152);
+}
+
 /* Bookcard */
 
 .libro {
