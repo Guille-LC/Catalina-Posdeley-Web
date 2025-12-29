@@ -7,9 +7,11 @@ const Bookcard = ({data}) => {
     return (
         <>
             <div className={styles.libro}>
-                <h2 className={styles.titulolibro}>{data.titulo}</h2>
+                <div>
+                    <Image className={styles.imagendeportada} src={data.image} width={250} height={650} alt={data.titulo} />
+                </div>
                 <div className={styles.libroinfoflex}>
-                    <Image className={styles.imagendeportada} src={data.image} width={200} height={600} alt={data.titulo} />
+                    <h2 className={styles.titulolibro}>{data.titulo}</h2>
                     <p className={styles.resumen}>{data.descripcion}</p>
                 </div>
                 <div className={styles.botonwrap}>
@@ -17,7 +19,6 @@ const Bookcard = ({data}) => {
                         <button className={styles.botonleergratis}>Leer gratis</button>
                     </Link>
                 </div>
-                <Image className={styles.separador} src='/separador.png' width={400} height={1} alt='sepadador'/>
             </div>
         </>
     )

@@ -5,6 +5,17 @@ import styles from './page.module.css'
 import Nobooks from '../components/Nobooks';
 import Link from 'next/link';
 
+export function generateStaticParams() {
+  return [
+    {genero:'all'},
+    {genero:'Juvenil'},
+    {genero:'Suspenso'},
+    {genero:'Aventura'},
+    {genero:'Fantasia'},
+    {genero:'Poesia'},
+  ]
+}
+
 export default async function ObrasGenero({ params }) {
 
   const { genero } = await params;
@@ -15,17 +26,9 @@ export default async function ObrasGenero({ params }) {
 
   const generoInvalido = genero !== 'all' && !generosValidos.includes(genero);
 
-  if(data.length === 0) {
-    return(
-      <Nobooks />
-    )
-  }
+  if(data.length === 0) return <Nobooks />
 
-  if (generoInvalido) {
-    return (
-      <GeneroInvalido />
-    )
-  }
+  if (generoInvalido) return <GeneroInvalido />
 
   const item = genero === 'all'
     ? data

@@ -36,11 +36,22 @@
 /* Bookcard */
 
 .libro {
-    margin: 30px;
-    width: 1000px;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.25);
+    border-color: rgb(255, 213, 114);
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 9px;
+    margin: 10px;
+    width: 1100px;
     padding-top: 10px;
     padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
+.imagendeportada {
+    margin-left: 10px;
 }
 
 .titulolibro {
@@ -50,21 +61,19 @@
 }
 
 .libroinfoflex {
+    gap: 20px;
+    margin: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    flex-direction: row;
-}
-
-.imagendeportada {
-    margin: 20px;
-    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.25);
+    flex-direction: column;
 }
 
 .resumen {
     font-family: 'Times New Roman', Times, serif ;
-    width: 500px;
+    width: 610px;
+    text-align: center;
     font-size: 1.4rem;
 }
 
@@ -72,15 +81,15 @@
     margin: 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .botonleergratis {
     border-color: blueviolet;
     border-radius: 5px;
     border-width: 5px;
-
+    box-shadow: -3px 3px 7px rgba(0, 0, 0, 0.25);
     background-color: transparent;
-
     padding: 5px;
     display: inline-block;
     width: fit-content;

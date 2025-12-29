@@ -22,6 +22,9 @@ const ballet = Ballet({
 export const metadata = {
   title: "Catalina Posdeley",
   description: "Sitio web sobre la escritora argentina Catalina Posdeley",
+  icons: {
+    icon: '/favicon.png'
+  }
 };
 
 export default function RootLayout({ children }) {
