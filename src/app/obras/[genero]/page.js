@@ -24,7 +24,7 @@ export default async function ObrasGenero({ params }) {
   });
 
   const json = await res.json();
-  const books = json.data; // 👈 ESTE es el array real
+  const books = json.data;
 
   if (!books || books.length === 0) return <Nobooks />;
 
