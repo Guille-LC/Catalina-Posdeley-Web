@@ -6,6 +6,8 @@ import Nobooks from '../components/Nobooks'
 import Link from 'next/link'
 import { getBooks } from '@/lib/getBooks.js'
 
+export const dynamic = 'force-dynamic'
+
 export function generateStaticParams() {
   return [
     { genero: 'all' },
