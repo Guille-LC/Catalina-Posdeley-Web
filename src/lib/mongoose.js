@@ -15,7 +15,7 @@ if (!cached) {
 export async function connectToDB() {
     if (cached.conn) return cached.conn;
 
-    if (!cached.promise) cached.promise = mongoose.connect(MONGODB_URI).then((mongoose) => mongoose);
+    if (!cached.promise) cached.promise = mongoose.connect(MONGODB_URI, { dbName: "catalina-posdeley-librosDB" }).then((mongoose) => mongoose);
 
     cached.conn = await cached.promise;
     
