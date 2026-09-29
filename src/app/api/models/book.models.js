@@ -13,4 +13,4 @@ const bookSchema = new mongoose.Schema({
     link: String
 })
 
-export const bookModel = mongoose.model(bookCollection,bookSchema)
+export const bookModel = mongoose.models[bookCollection] || mongoose.model(bookCollection, bookSchema)

@@ -4,6 +4,7 @@ import GeneroInvalido from '../components/GeneroInvalido'
 import styles from './page.module.css'
 import Nobooks from '../components/Nobooks'
 import Link from 'next/link'
+import { getBooks } from '@/lib/getBooks.js'
 
 export function generateStaticParams() {
   return [
@@ -19,12 +20,7 @@ export function generateStaticParams() {
 export default async function ObrasGenero({ params }) {
   const { genero } = await params;
 
-  const res = await fetch("http://localhost:3000/api/obras", {
-    cache: "no-store",
-  });
-
-  const json = await res.json();
-  const books = json.data;
+  const books = await getBooks();
 
   if (!books || books.length === 0) return <Nobooks />;
 
