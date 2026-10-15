@@ -3,6 +3,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Paleta de marca: violeta -> magenta/rosa */
+  --color-primary: #6a00ff;
+  --color-primary-light: #984eff;
+  --color-secondary: #ff72db;
+  --color-secondary-light: #ffa8e9;
+  --color-accent: #a81e81;
+  --color-accent-light: #e157c5;
+  --color-border-soft: #e4d4ff;
 }
 
 @theme inline {
@@ -54,14 +63,14 @@ body {
   padding: 10px 25px;
   font-size: 1rem;
   color: #ffffff;
-  background: linear-gradient(135deg, #6a00ff, #ff72db);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   border: none;
   border-radius: 6px;
   cursor: pointer;
 
   /* Neon base */
   box-shadow: 0 0 6px rgba(106, 0, 255, 0.6);
-  transition: 
+  transition:
     box-shadow 0.25s ease,
     text-shadow 0.25s ease,
     transform 0.25s ease;
@@ -74,21 +83,21 @@ body {
   padding: 10px 25px;
   font-size: 1rem;
   color: #ffffff;
-  background: linear-gradient(135deg, #984eff, #ffa8e9);
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-secondary-light));
   border: none;
   border-radius: 6px;
   cursor: pointer;
 
   /* Neon base */
   box-shadow: 0 0 6px rgba(106, 0, 255, 0.6);
-  transition: 
+  transition:
     box-shadow 0.25s ease,
     text-shadow 0.25s ease,
     transform 0.25s ease;
 }
 
 .navbutton:hover {
-  background: linear-gradient(135deg, #ff72db, #6a00ff);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
   box-shadow:
     0 0 12px rgba(255, 0, 200, 0.5);
   transform: translateY(-3px);
@@ -125,7 +134,7 @@ body {
   border-radius: 8px;
   font-weight: 500;
   background: transparent;
-  color: #a81e81;
+  color: var(--color-accent);
   border: 4px solid;
   transition: 0.35s ease;
   cursor: pointer;
@@ -134,7 +143,7 @@ body {
 .leermas:hover {
   color: white;
   border-color: transparent;
-  background-image: linear-gradient(45deg, #a81e81, #e157c5), linear-gradient(45deg, #a81e81, #e157c5);
+  background-image: linear-gradient(45deg, var(--color-accent), var(--color-accent-light)), linear-gradient(45deg, var(--color-accent), var(--color-accent-light));
 }
 
 .titulolesroutes {

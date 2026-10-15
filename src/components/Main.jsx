@@ -24,7 +24,13 @@ const Main = () => {
                     </div>
                     <div>
                         <Link href={'https://www.buscalibre.com.ar/libro-les-routes/9786316624475/p/64312491'} target="_blank" rel="noopener noreferrer">
-                            <button type="button" className="botonbuscalibre mx-auto block text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5">Buscalibre</button>
+                            <button
+                                type="button"
+                                className="botonbuscalibre mx-auto block text-white font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5 transition-opacity hover:opacity-90"
+                                style={{ background: 'linear-gradient(135deg, var(--color-accent), var(--color-accent-light))' }}
+                            >
+                                Buscalibre
+                            </button>
                         </Link>
                     </div>
                 </section>
