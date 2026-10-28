@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import styles from '../[genero]/page.module.css'
+import styles from '../../[genero]/page.module.css'
 
 const GeneroInvalido = () => {
 
