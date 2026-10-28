@@ -1,0 +1,13 @@
+@use '../errorState' as shared;
+
+.titulonoencontrado {
+  @include shared.tituloNoEncontrado;
+}
+
+.botonvolverwrap {
+  @include shared.botonVolverWrap;
+}
+
+.volveratras {
+  @include shared.volverAtras;
+}

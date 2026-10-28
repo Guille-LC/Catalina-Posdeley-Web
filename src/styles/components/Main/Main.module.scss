@@ -1,0 +1,103 @@
+.presentation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  height: 400px;
+  background: url('https://wallpaperbat.com/img/760480-purple-butterfly-desktop-wallpaper-top-free-purple-butterfly-desktop-background.jpg');
+}
+
+.titulonombre {
+  font-size: 2.6rem;
+  font-weight: bold;
+  font-family: 'Ballet';
+}
+
+.info {
+  width: 750px;
+  text-align: center;
+  margin: 0 auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.leermas {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  background: transparent;
+  color: var(--color-accent);
+  border: 4px solid;
+  transition: 0.35s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    border-color: transparent;
+    background-image: linear-gradient(45deg, var(--color-accent), var(--color-accent-light)), linear-gradient(45deg, var(--color-accent), var(--color-accent-light));
+  }
+}
+
+.titulolesroutes {
+  font-family: 'Ballet';
+  font-size: 3rem;
+  font: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+.seccionultimolibro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.bookcover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.resumenlesroutes {
+  width: 400px;
+  text-align: right;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.inicial {
+  font-family: 'Ballet';
+  font-size: 2.5rem;
+}
+
+.botonbuscalibre {
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.mainsection {
+  padding-top: 50px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.obrasbanner {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.h2 {
+  margin: 10px;
+  font-size: 3rem;
+  font: bold;
+  font-family: 'Ballet';
+}

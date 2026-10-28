@@ -5,3 +5,4 @@ Ver [policies/esp.md](policies/esp.md) (o [policies/eng.md](policies/eng.md)) pa
 - **Política 1**: nunca trabajar ni commitear directo sobre `main`. Para cualquier tarea, crear primero una rama nueva a partir de `main`, trabajar ahí, describir los cambios al abrir el PR y pedir permiso antes de mergear — nunca mergear sin permiso explícito.
 - **Política 2**: cada componente va en su propia carpeta (nombrada como el componente), nunca como archivo suelto junto a otros.
 - **Política 3**: convenciones de código — `camelCase` para variables/funciones, `PascalCase` para componentes/tipos, `UPPER_SNAKE_CASE` para env vars.
+- **Política 4**: todos los estilos van en `src/styles/`, espejando la estructura de `src/components/` y `src/app/` — nunca un archivo de estilos al lado del componente/página. Se escriben en Sass.

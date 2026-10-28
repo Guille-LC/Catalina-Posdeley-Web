@@ -1,0 +1,27 @@
+@mixin tituloNoEncontrado {
+  padding: 40px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+@mixin botonVolverWrap {
+  display: flex;
+  justify-content: center;
+  margin: 60px;
+}
+
+@mixin volverAtras {
+  margin: 0 auto;
+  border-width: 5px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: var(--color-accent);
+  font-size: 1.4rem;
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: aliceblue;
+  }
+}

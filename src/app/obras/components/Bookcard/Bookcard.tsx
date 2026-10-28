@@ -1,4 +1,4 @@
-import styles from '../../[genero]/page.module.css'
+import styles from '@/styles/app/obras/components/Bookcard/Bookcard.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Book } from '@/types/book'

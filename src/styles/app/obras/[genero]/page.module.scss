@@ -1,0 +1,30 @@
+.bookcardwrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Botonera de generos */
+
+.botoneraGeneros {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--background);
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.generoBoton {
+  font-family: 'Times New Roman', Times, serif;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--color-accent);
+  }
+}
