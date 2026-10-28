@@ -1,7 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const links = [
+interface FooterLink {
+    label: string
+    href: string
+}
+
+const links: FooterLink[] = [
     { label: 'Inicio', href: '/' },
     { label: 'Obras', href: '/obras/all' },
     { label: 'La autora', href: '/autora' },

@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Geist, Geist_Mono, Ballet } from "next/font/google";
 import "./globals.css";
@@ -17,10 +19,11 @@ const geistMono = Geist_Mono({
 });
 
 const ballet = Ballet({
-  subsets: ['latin']
+  subsets: ['latin'],
+  variable: '--font-ballet',
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Catalina Posdeley",
   description: "Sitio web sobre la escritora argentina Catalina Posdeley",
   icons: {
@@ -28,7 +31,7 @@ export const metadata = {
   }
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
       <body className={`${geistSans.variable} ${geistMono.variable} ${ballet.variable} antialiased`}>

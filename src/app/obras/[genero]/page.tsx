@@ -1,10 +1,9 @@
-import React from 'react'
 import Bookcard from '../components/Bookcard'
 import GeneroInvalido from '../components/GeneroInvalido'
 import styles from './page.module.css'
 import Nobooks from '../components/Nobooks'
 import Link from 'next/link'
-import { getBooks } from '@/lib/getBooks.js'
+import { getBooks } from '@/lib/getBooks'
 
 export const dynamic = 'force-dynamic'
 
@@ -19,7 +18,11 @@ export function generateStaticParams() {
   ]
 }
 
-export default async function ObrasGenero({ params }) {
+interface ObrasGeneroProps {
+  params: Promise<{ genero: string }>
+}
+
+export default async function ObrasGenero({ params }: ObrasGeneroProps) {
   const { genero } = await params;
 
   const books = await getBooks();

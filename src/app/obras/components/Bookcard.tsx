@@ -1,9 +1,13 @@
-import React from 'react'
 import styles from '../[genero]/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import type { Book } from '@/types/book'
 
-const Bookcard = ({data}) => {
+interface BookcardProps {
+    data: Book
+}
+
+const Bookcard = ({ data }: BookcardProps) => {
     return (
         <>
             <div className={styles.libro}>

@@ -4,7 +4,12 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-const links = [
+interface NavLink {
+    label: string
+    href: string
+}
+
+const links: NavLink[] = [
     {
         label: 'Inicio',
         href: '/'
@@ -30,7 +35,7 @@ export function Header() {
     return(
         <>
             <header className="header">
-                <Image className="logo" src='/butterflylogo.png' width={100} height={100} alt="butterfly" unoptimized/> 
+                <Image className="logo" src='/butterflylogo.png' width={100} height={100} alt="butterfly" unoptimized/>
                 <nav className="navbar">
                     {
                         links.map((link) => {
