@@ -2,7 +2,7 @@
   background-color: #ffffff;
   height: 90px;
   display: flex;
-  gap: 50px;
+  gap: 28px;
   justify-content: center;
   align-items: center;
   box-shadow: 0 9px 10px rgba(0, 0, 0, 0.15);
@@ -14,54 +14,49 @@
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: row;
-  gap: 50px;
+  gap: 40px;
 }
 
 .logo {
-  margin: 30px;
+  margin: 0;
 }
 
-.navbutton {
+.navbutton,
+.navbuttonactive {
+  position: relative;
+  padding: 8px 2px;
   margin: 0 auto;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 10px 25px;
   font-size: 1rem;
-  color: #ffffff;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  font-weight: 400;
+  color: #1a1a1a;
+  background: none;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
+  transition: color 0.25s ease;
 
-  /* Neon base */
-  box-shadow: 0 0 6px rgba(106, 0, 255, 0.6);
-  transition:
-    box-shadow 0.25s ease,
-    text-shadow 0.25s ease,
-    transform 0.25s ease;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
 
   &:hover {
-    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
-    box-shadow: 0 0 12px rgba(255, 0, 200, 0.5);
-    transform: translateY(-3px);
+    color: var(--color-primary);
+
+    &::after {
+      transform: scaleX(1);
+    }
   }
 }
 
 .navbuttonactive {
-  font-weight: 400;
-  margin: 0 auto;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 10px 25px;
-  font-size: 1rem;
-  color: #ffffff;
-  background: linear-gradient(135deg, var(--color-primary-light), var(--color-secondary-light));
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-
-  /* Neon base */
-  box-shadow: 0 0 6px rgba(106, 0, 255, 0.6);
-  transition:
-    box-shadow 0.25s ease,
-    text-shadow 0.25s ease,
-    transform 0.25s ease;
+  color: var(--color-primary);
 }

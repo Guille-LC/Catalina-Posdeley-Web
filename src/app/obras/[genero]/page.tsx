@@ -42,12 +42,12 @@ export default async function ObrasGenero({ params }: ObrasGeneroProps) {
   return (
     <div className={styles.bookcardwrap}>
       <section className={styles.botoneraGeneros}>
-        <Link className={styles.generoBoton} href="/obras/all">Todos</Link>
-        <Link className={styles.generoBoton} href="/obras/Juvenil">Juvenil</Link>
-        <Link className={styles.generoBoton} href="/obras/Suspenso">Suspenso</Link>
-        <Link className={styles.generoBoton} href="/obras/Aventura">Aventura</Link>
-        <Link className={styles.generoBoton} href="/obras/Fantasia">Fantasia</Link>
-        <Link className={styles.generoBoton} href="/obras/Poesia">Poesia</Link>
+        <Link className={genero === 'all' ? styles.generoBotonActivo : styles.generoBoton} href="/obras/all">Todos</Link>
+        <Link className={genero === 'Juvenil' ? styles.generoBotonActivo : styles.generoBoton} href="/obras/Juvenil">Juvenil</Link>
+        <Link className={genero === 'Suspenso' ? styles.generoBotonActivo : styles.generoBoton} href="/obras/Suspenso">Suspenso</Link>
+        <Link className={genero === 'Aventura' ? styles.generoBotonActivo : styles.generoBoton} href="/obras/Aventura">Aventura</Link>
+        <Link className={genero === 'Fantasia' ? styles.generoBotonActivo : styles.generoBoton} href="/obras/Fantasia">Fantasia</Link>
+        <Link className={genero === 'Poesia' ? styles.generoBotonActivo : styles.generoBoton} href="/obras/Poesia">Poesia</Link>
       </section>
 
       {items.map(book => (

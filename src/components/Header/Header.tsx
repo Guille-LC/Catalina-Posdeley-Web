@@ -36,7 +36,7 @@ export function Header() {
     return(
         <>
             <header className={styles.header}>
-                <Image className={styles.logo} src='/butterflylogo.png' width={100} height={100} alt="butterfly" unoptimized/>
+                <Image className={styles.logo} src='/butterfly-logo.png' width={100} height={100} alt="butterfly" unoptimized/>
                 <nav className={styles.navbar}>
                     {
                         links.map((link) => {
