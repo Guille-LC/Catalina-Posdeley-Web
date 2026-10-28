@@ -25,6 +25,11 @@ Versión en inglés: [eng.md](eng.md)
 - El modelo de Mongoose se registra con el guard `mongoose.models[nombre] || mongoose.model(nombre, schema)` para evitar `OverwriteModelError` en hot-reload (dev) y en funciones serverless "calientes" (producción). No sacar ese guard.
 - Las páginas y la API nunca hacen `fetch` a la propia API del sitio (`/api/obras`) desde un Server Component — todas usan [src/lib/getBooks.ts](../src/lib/getBooks.ts), que llama directo a Mongo. Hacer fetch a la propia API desde el servidor rompe en Vercel (URL hardcodeada o inválida) y además pisa un bug conocido de Next.js/undici con `cache: "no-store"`.
 
+### Estilos (Sass)
+
+- El import de Tailwind (`@import "tailwindcss";` + el bloque `@theme inline`) vive aparte, en [src/styles/app/tailwind.css](../src/styles/app/tailwind.css) (CSS plano). Si se mueve ese `@import` a un archivo `.scss`, Sass lo trata como su propio `@import` (deprecado) y tira un warning en cada build/request — por eso ese archivo puntual se deja en `.css`, no en `.scss`.
+- `globals.scss` solo tiene las variables (`:root`), el modo oscuro y la regla de `body`. Ambos archivos se importan juntos desde `src/app/layout.tsx`.
+
 ---
 
 ## Política 1 — Ramas y merge
@@ -49,3 +54,9 @@ Hay que respetar el orden de carpetas del proyecto. Cada componente debe tener s
 - Archivos de un componente: mismo nombre que el componente, en su propia carpeta (ver Política 2).
 - Variables de entorno y constantes de configuración: `UPPER_SNAKE_CASE` (ej: `MONGODB_URI`).
 - Clases CSS (CSS Modules): `camelCase` (ej: `botoneraGeneros`).
+
+## Política 4 — Organización de estilos
+
+Todos los estilos se centralizan en `src/styles/`, reflejando la misma estructura de carpetas que `src/components/` y `src/app/` (un componente en `src/components/Header/` tiene su estilo en `src/styles/components/Header/`, una página en `src/app/autora/` tiene el suyo en `src/styles/app/autora/`, etc.). Ningún componente o página tiene un archivo de estilos al lado de su código.
+
+Los estilos se escriben en Sass (`.module.scss` para módulos con clases locales, `.scss`/`.css` para lo global). Si dos componentes comparten reglas, se factorizan en un partial (`_nombre.scss`) con mixins en vez de duplicar las reglas en cada archivo.

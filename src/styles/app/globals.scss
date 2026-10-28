@@ -1,0 +1,26 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Paleta de marca: violeta -> magenta/rosa */
+  --color-primary: #6a00ff;
+  --color-primary-light: #984eff;
+  --color-secondary: #ff72db;
+  --color-secondary-light: #ffa8e9;
+  --color-accent: #a81e81;
+  --color-accent-light: #e157c5;
+  --color-border-soft: #e4d4ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}

@@ -25,6 +25,11 @@ Spanish version: [esp.md](esp.md)
 - The Mongoose model is registered with the `mongoose.models[name] || mongoose.model(name, schema)` guard to avoid `OverwriteModelError` on hot-reload (dev) and on warm serverless functions (production). Don't remove that guard.
 - Pages and the API never `fetch` the site's own API (`/api/obras`) from a Server Component — they all use [src/lib/getBooks.ts](../src/lib/getBooks.ts), which calls Mongo directly. Self-fetching the API from the server breaks on Vercel (hardcoded or invalid URL) and also hits a known Next.js/undici bug with `cache: "no-store"`.
 
+### Styles (Sass)
+
+- Tailwind's import (`@import "tailwindcss";` plus the `@theme inline` block) lives separately, in [src/styles/app/tailwind.css](../src/styles/app/tailwind.css) (plain CSS). If that `@import` moves into a `.scss` file, Sass treats it as its own (deprecated) `@import` and throws a warning on every build/request — that's why this one file stays `.css`, not `.scss`.
+- `globals.scss` only holds the variables (`:root`), dark mode, and the `body` rule. Both files are imported together from `src/app/layout.tsx`.
+
 ---
 
 ## Policy 1 — Branching and merging
@@ -49,3 +54,9 @@ Respect the project's folder structure. Every component must have its own folder
 - Component files: same name as the component, inside its own folder (see Policy 2).
 - Environment variables and config constants: `UPPER_SNAKE_CASE` (e.g. `MONGODB_URI`).
 - CSS classes (CSS Modules): `camelCase` (e.g. `botoneraGeneros`).
+
+## Policy 4 — Styles organization
+
+All styles are centralized in `src/styles/`, mirroring the same folder structure as `src/components/` and `src/app/` (a component at `src/components/Header/` has its styles at `src/styles/components/Header/`, a page at `src/app/autora/` has its own at `src/styles/app/autora/`, etc.). No component or page has a style file sitting next to its code.
+
+Styles are written in Sass (`.module.scss` for modules with locally-scoped classes, `.scss`/`.css` for global ones). If two components share rules, factor them into a partial (`_name.scss`) with mixins instead of duplicating the rules in each file.

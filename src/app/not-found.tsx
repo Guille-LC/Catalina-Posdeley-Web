@@ -1,6 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
+import styles from '@/styles/app/not-found.module.scss'
 
 const NotFound = () => {
 
@@ -8,7 +9,7 @@ const NotFound = () => {
 
     return (
         <>
-            <h1 className='notfoundtitulo'>¡Pagina no encontrada!</h1>
+            <h1 className={styles.notfoundtitulo}>¡Pagina no encontrada!</h1>
             <button
                 className='mx-auto block text-white font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5 transition-opacity hover:opacity-90'
                 style={{ background: 'linear-gradient(135deg, var(--color-primary), var(--color-secondary))' }}

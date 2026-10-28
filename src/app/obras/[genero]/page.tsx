@@ -1,6 +1,6 @@
 import Bookcard from '../components/Bookcard'
 import GeneroInvalido from '../components/GeneroInvalido'
-import styles from './page.module.css'
+import styles from '@/styles/app/obras/[genero]/page.module.scss'
 import Nobooks from '../components/Nobooks'
 import Link from 'next/link'
 import { getBooks } from '@/lib/getBooks'

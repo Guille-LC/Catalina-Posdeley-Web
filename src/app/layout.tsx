@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Geist, Geist_Mono, Ballet } from "next/font/google";
-import "./globals.css";
+import "@/styles/app/tailwind.css";
+import "@/styles/app/globals.scss";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { ScrollToTop } from "../components/ScrollToTop";

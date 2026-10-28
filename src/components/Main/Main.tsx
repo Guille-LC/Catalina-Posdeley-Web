@@ -1,31 +1,32 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import styles from '@/styles/components/Main/Main.module.scss'
 
 const Main = () => {
     return (
         <>
             <main>
                 <section>
-                    <div className='presentation'>
-                        <span className='titulonombre'>Catalina Elvira Posdeley</span>
-                            <p className='info'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat nulla, malesuada vitae bibendum sed, tristique in purus. Donec imperdiet eleifend mollis. In ac pharetra enim. In luctus ultricies vulputate. Phasellus vitae dui nec purus ullamcorper lacinia. Pellentesque vestibulum eu ex ut suscipit. In at tellus consequat, vulputate magna non, molestie eros. Nam sit amet varius dui, ac elementum eros.</p>
+                    <div className={styles.presentation}>
+                        <span className={styles.titulonombre}>Catalina Elvira Posdeley</span>
+                            <p className={styles.info}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat nulla, malesuada vitae bibendum sed, tristique in purus. Donec imperdiet eleifend mollis. In ac pharetra enim. In luctus ultricies vulputate. Phasellus vitae dui nec purus ullamcorper lacinia. Pellentesque vestibulum eu ex ut suscipit. In at tellus consequat, vulputate magna non, molestie eros. Nam sit amet varius dui, ac elementum eros.</p>
                         <Link href={'/autora'}>
-                            <span className="leermas">Leer mas...</span>
+                            <span className={styles.leermas}>Leer mas...</span>
                         </Link>
                     </div>
                 </section>
                 <section>
-                    <h2 className='titulolesroutes'>Les Routes: La Teoria del Caos</h2>
-                    <div className='seccionultimolibro'>
-                        <p className='resumenlesroutes'><span className='inicial'>C</span>onnor se muda al misterioso pueblo de Odimor para comenzar de cero. Sin embargo, la escuela allí no es lo que esperaba: se mete en peleas para defenderse, no asiste a clase porque se siente exiliado y se lleva mal con los profesores, por lo que está a punto de ser expulsado de la institución. Al intentar enderezar su camino, conoce a una chica marginada, de la cual nadie habla y a la que nadie mira; solo le aconsejan que no se acerque a ella, pues es peligrosa. Eso despierta su curiosidad.
+                    <h2 className={styles.titulolesroutes}>Les Routes: La Teoria del Caos</h2>
+                    <div className={styles.seccionultimolibro}>
+                        <p className={styles.resumenlesroutes}><span className={styles.inicial}>C</span>onnor se muda al misterioso pueblo de Odimor para comenzar de cero. Sin embargo, la escuela allí no es lo que esperaba: se mete en peleas para defenderse, no asiste a clase porque se siente exiliado y se lleva mal con los profesores, por lo que está a punto de ser expulsado de la institución. Al intentar enderezar su camino, conoce a una chica marginada, de la cual nadie habla y a la que nadie mira; solo le aconsejan que no se acerque a ella, pues es peligrosa. Eso despierta su curiosidad.
                         Connor acepta ciegamente lo que el destino le depara, cada caricia y cada golpe, sin preguntar por qué. Pronto descubrirá que sus amigos, enemigos y conocidos no fueron sinceros. ¿Cuánto tiempo aguantará?</p>
-                        <Image className='bookcover' src={'/lesroutescover.png'} width={300} height={1100} alt='lesroutes'/>
+                        <Image className={styles.bookcover} src={'/lesroutescover.png'} width={300} height={1100} alt='lesroutes'/>
                     </div>
                     <div>
                         <Link href={'https://www.buscalibre.com.ar/libro-les-routes/9786316624475/p/64312491'} target="_blank" rel="noopener noreferrer">
                             <button
                                 type="button"
-                                className="botonbuscalibre mx-auto block text-white font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5 transition-opacity hover:opacity-90"
+                                className={`${styles.botonbuscalibre} mx-auto block text-white font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5 transition-opacity hover:opacity-90`}
                                 style={{ background: 'linear-gradient(135deg, var(--color-accent), var(--color-accent-light))' }}
                             >
                                 Buscalibre
@@ -33,14 +34,14 @@ const Main = () => {
                         </Link>
                     </div>
                 </section>
-                <section className='mainsection'>
-                    <h2 className='h2'>Obras Completas</h2>
+                <section className={styles.mainsection}>
+                    <h2 className={styles.h2}>Obras Completas</h2>
                     <Link href={`/obras/all`}>
-                        <Image className='obrasbanner' src={'/banner.png'} width={500} height={150} alt='banner'/>
+                        <Image className={styles.obrasbanner} src={'/banner.png'} width={500} height={150} alt='banner'/>
                     </Link>
                 </section>
-                <section className='mainsection'>
-                    <h2 className='h2'>Mis redes</h2>
+                <section className={styles.mainsection}>
+                    <h2 className={styles.h2}>Mis redes</h2>
                     A DEFINIR
                 </section>
             </main>

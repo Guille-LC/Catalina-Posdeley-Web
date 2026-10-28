@@ -1,4 +1,4 @@
-import styles from './page.module.css'
+import styles from '@/styles/app/autora/page.module.scss'
 
 const Autora = () => {
     return (
